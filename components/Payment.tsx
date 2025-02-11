@@ -23,11 +23,11 @@ const Payment = () => {
     if (!paddle) return alert("Paddle not initialized");
 
     paddle.Checkout.open({
-      items: [{ priceId: "pro_01jkt99bn3py1ndtbgs6bshq4e", quantity: 1 }],
+      items: [{ priceId: "pri_01jkt9ansy387jv3d6sca3hcf9", quantity: 1 }],
       settings: {
         displayMode: "overlay",
         theme: "dark",
-        successUrl: "https://paddle-six.vercel.app/",
+        successUrl: "http://localhost:3000/",
       },
     });
   };
