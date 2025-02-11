@@ -4,7 +4,7 @@ import { initializePaddle, Paddle } from "@paddle/paddle-js";
 import { useEffect, useState } from "react";
 
 const Payment = () => {
-  const [paddle, setPaddle] = useState<Paddle | null>(null);
+  const [paddle, setPaddle] = useState<Paddle>();
 
   useEffect(() => {
     initializePaddle({
@@ -27,18 +27,17 @@ const Payment = () => {
       settings: {
         displayMode: "overlay",
         theme: "dark",
-        successUrl: "http://localhost:3000", // Ensure it matches your Paddle settings
+        successUrl: "https://paddle-six.vercel.app/",
       },
     });
   };
-
   return (
     <div>
       <button
         className="text-lg bg-green-800 hover:bg-green-900 px-2 py-1 text-white rounded-lg"
         onClick={handleCheckout}
       >
-        Proceed to Payment
+        Procced to payment
       </button>
     </div>
   );
